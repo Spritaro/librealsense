@@ -654,8 +654,8 @@ namespace librealsense
                 all_sensors_present &= (hids.capacity() >= 2);
             }
 
-            if (!devices.empty() && all_sensors_present)
-            {
+            //if (!devices.empty() && all_sensors_present)
+            //{
                 platform::usb_device_info hwm;
 
                 std::vector<platform::usb_device_info> hwm_devices;
@@ -672,11 +672,11 @@ namespace librealsense
                 chosen.insert(chosen.end(), devices.begin(), devices.end());
                 results.push_back(info);
 
-            }
-            else
-            {
-                LOG_WARNING("DS5 group_devices is empty.");
-            }
+            //}
+            //else
+            //{
+            //    LOG_WARNING("DS5 group_devices is empty.");
+            //}
         }
 
         trim_device_list(group.uvc_devices, chosen);
