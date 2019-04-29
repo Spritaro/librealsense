@@ -588,10 +588,10 @@ namespace librealsense
 
             // Device with hids can be enabled only if both hids (gyro and accelerometer) are present
             // Assuming that hids amount of 2 and above guarantee that gyro and accelerometer are present
-            if (is_device_hid_sensor)
-            {
-                all_sensors_present &= (hids.capacity() >= 2);
-            }
+            // if (is_device_hid_sensor)
+            // {
+            //     all_sensors_present &= (hids.capacity() >= 2);
+            // }
 
             if (!devices.empty() && all_sensors_present)
             {
